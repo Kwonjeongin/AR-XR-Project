@@ -16,6 +16,23 @@ AR-XRProject는 ARNavigation 및 XR 플랫폼 개발 및 콘텐츠 구축사업�
 > 지원기기: [ARCore 지원 기기](https://developers.google.com/ar/devices?hl=ko, "ARCore 지원 기기")
 
 ---
+## 기능소개
+### ImageDetection
+- AR Core의 AR Tracked Image Manager를 사용하여 Reference Image Library에 등록된 Logo 이미지 감지
+- 각 Logo를 인식했을 때 해당하는 내 GPS와 가게(서브웨이, 매머드커피)의 메뉴 오브젝트를 해당 오브젝트의 GPS 위치에 생성
+(Reference Image Library에 등록된 각각의 이미지들은 arcoreimg.exe 프로그램을 통해 인식률 70%이상 확인된 이미지를 사용)  
+
+### Basic Geospatial Demo
+- AR Core Extension의 Geospatial 기능을 사용하여, 실제 위치에 3D Object를 생성
+- AR Geospatial Creator 기능을 사용하여 3D Object의 정확한 Localization 구현
+- 자세한 내용은 Link를 클릭해 주세요.
+
+### Geospatial Demo with Firebase Database
+- Basic Geospatial Demo Scene에 Firebase Realtime Database에 저장해 놓은 각 가게들의 GPS정보들을 불러온다.
+- 불러온 GPS정보에 따라 Geospatial Crator Anchor를 가지고 있는 3D Object를 생성, 3D Object를 내 위치 기반으로 배치
+
+
+---
 <br>
 
 ## 시작하는 방법
