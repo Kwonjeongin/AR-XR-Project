@@ -17,6 +17,18 @@ AR-XRProject는 ARNavigation 및 XR 플랫폼 개발 및 콘텐츠 구축사업�
 
 ---
 ## 기능소개
+
+1. AR 내비게이션
+2. AR 체험존 (포토존 / 도슨트)
+3. AR 거리뷰
+4. XR 체험존 (XR 드라마 , XR 산책, XR 아카이브)
+---
+## 기능상세 소개
+
+1. AR 내비게이션 
+### Google API 기반 Navigation
+
+2. AR 체험존 
 ### ImageDetection
 - AR Core의 AR Tracked Image Manager를 사용하여 Reference Image Library에 등록된 Logo 이미지 감지
 - 각 Logo를 인식했을 때 해당하는 내 GPS와 가게(서브웨이, 매머드커피)의 메뉴 오브젝트를 해당 오브젝트의 GPS 위치에 생성
@@ -31,6 +43,12 @@ AR-XRProject는 ARNavigation 및 XR 플랫폼 개발 및 콘텐츠 구축사업�
 - Basic Geospatial Demo Scene에 Firebase Realtime Database에 저장해 놓은 각 가게들의 GPS정보들을 불러온다.
 - 불러온 GPS정보에 따라 Geospatial Crator Anchor를 가지고 있는 3D Object를 생성, 3D Object를 내 위치 기반으로 배치
 
+3. AR 거리뷰
+
+4. XR 체험존
+- XR 드라마
+- XR 산책
+- XR 아카이브
 
 ---
 <br>
