@@ -1,5 +1,7 @@
 # AR-XR-Project
-AR-XRProject는 ARNavigation 및 XR 플랫폼 개발 및 콘텐츠 구축사업의 일환으로, 사용자가 지역을 걸어다니며 이용할 수 있는 ARNavigation, 특정 위치에서 활용할 수 있는 AR포토존 및 AR도슨트를 포함합니다.
+AR-XRProject는 ARNavigation 및 XR 컨텐츠를 개발하는 프로젝트 입니다. 
+<br>
+사용자가 지역을 걸어다니며 이용할 수 있는 ARNavigation 및 특정 위치에서 상호작용할 수 있는 AR도슨트를 포함합니다.
 <br>
 <br>
 ![ezgif-1-eb3981f90d](https://github.com/henry2craftman/ARNavigation/assets/141684228/27f395b6-70f9-41b1-ad73-484e9786abc7)
@@ -13,47 +15,54 @@ AR-XRProject는 ARNavigation 및 XR 플랫폼 개발 및 콘텐츠 구축사업�
 
 > Platform: Android
 
+>API : Google Map Api 
+
 > 지원기기: [ARCore 지원 기기](https://developers.google.com/ar/devices?hl=ko, "ARCore 지원 기기")
 
 ---
-## 기능소개
-
+## 기능소개 
+0. Unity 이해
 1. AR 내비게이션
-2. AR 체험존 (포토존 / 도슨트)
-3. AR 거리뷰
-4. XR 체험존 (XR 드라마 , XR 산책, XR 아카이브)
+2. AR 도슨트 체험존
 ---
 ## 기능상세 소개
 
-1. AR 내비게이션 
-### Google API 기반 Navigation
+### 1. AR 내비게이션 
+Google API 기반 Navigation
 
-2. AR 체험존 
-### ImageDetection
-- AR Core의 AR Tracked Image Manager를 사용하여 Reference Image Library에 등록된 Logo 이미지 감지
-- 각 Logo를 인식했을 때 해당하는 내 GPS와 가게(서브웨이, 매머드커피)의 메뉴 오브젝트를 해당 오브젝트의 GPS 위치에 생성
-(Reference Image Library에 등록된 각각의 이미지들은 arcoreimg.exe 프로그램을 통해 인식률 70%이상 확인된 이미지를 사용)  
+### 2. AR 도슨트 체험존 
 
-### Basic Geospatial Demo
-- AR Core Extension의 Geospatial 기능을 사용하여, 실제 위치에 3D Object를 생성
+[ImageDetection]
+- AR Core의 AR Tracked Image Manager를 사용하여 Reference Image Library에 등록된 도슨트 정보 이미지 감지 
+- 각 Logo를 인식했을 때 해당하는 내 GPS와 도슨트 정보를 해당 오브젝트의 GPS 위치에 생성
+(Reference Image Library에 등록된 각각의 정보들은 arcoreimg.exe 프로그램을 통해 인식률 70%이상 확인된 이미지를 사용)  
+
+[Basic Geospatial Demo]
+- AR Core Extension의 Geospatial 기능을 사용하여, 실제 위치에 상호작용할 3D Object를 생성
 - AR Geospatial Creator 기능을 사용하여 3D Object의 정확한 Localization 구현
-- 자세한 내용은 Link를 클릭해 주세요.
 
-### Geospatial Demo with Firebase Database
-- Basic Geospatial Demo Scene에 Firebase Realtime Database에 저장해 놓은 각 가게들의 GPS정보들을 불러온다.
-- 불러온 GPS정보에 따라 Geospatial Crator Anchor를 가지고 있는 3D Object를 생성, 3D Object를 내 위치 기반으로 배치
-
-3. AR 거리뷰
-
-4. XR 체험존
-- XR 드라마
-- XR 산책
-- XR 아카이브
+[Geospatial Demo with Firebase Database]
+- Basic Geospatial Demo Scene에 Firebase Realtime Database에 저장해 놓은 각 도슨트들의 GPS정보들을 불러온다.
+- 불러온 GPS정보에 따라 Geospatial Crator Anchor를 가지고 있는 3D Object를 생성, 3D Object를 내 위치 기반으로 배치합니다.
 
 ---
 <br>
 
-## 시작하는 방법
+## Unity 시작하기
+
+<br>
+
+### 1. 유니티 프로그램 설치 
+### 2. 유니티 프로젝트 생성
+### 3. 유니티 에디터 살펴보기
+### 4. 오브젝트 배치하기
+### 5. 비쥬얼 스튜디오 연동
+
+<br>
+
+
+
+## AR내비게이션 시작하는 방법
 ### 1. ARCore Extension Package 설치
 AR Foundation용 [ARCore Extension Package](https://developers.google.com/ar/develop/unity-arf/getting-started-extensions?hl=ko)는 Unity의 AR Foundation 패키지에 기능을 추가하여 앱에서 Cloud Anchors, 카메라 구성 필터, 녹화 및 재생과 같은 기능을 사용할 수 있습니다.
 
@@ -99,47 +108,35 @@ ARCore 및 Google Maps Platform에서 제공하는 [Geospatial Creator](https://
 
 <br>
 
-### 4. Naver Cloud Platform API 사용 설정
-[Naver Cloud Platform](https://www.ncloud.com/, "Never Cloud Platform")은 네이버, 라인, 밴드, 스노우, 웹툰 등 성공적인 네이버 글로벌 서비스를 위한 IT 서비스 플랫폼입니다.
-
-> Naver Cloud Platform 접속 -> 가입 -> API Key 발급
-
-#### 4-1. Directions5 API 사용 설정정
-[Direction 5 API](https://api.ncloud-docs.com/docs/ai-naver-mapsdirections, "Direction 5 API")는 사용자가 지정한 출발지/목적지 정보에 따라 경로 관련 정보를 제공합니다.
-
-> Naver Cloud Platform 접속 -> 가입 -> API Key 발급
-
+#### 4. Android Build Settings
 <details>
 <summary>내용</summary>
 이미지
 </details>
 
-#### 4-2. Static Map API 사용 설정
-[Static Map API](https://api.ncloud-docs.com/docs/ai-naver-mapsstaticmap, "Static Map API")는 요청된 URL 매개변수를 기반으로 웹 페이지에 표시할 수 있는 이미지로 지도를 반환
+#### 5. JsonDataManager 사용하기
 
-<details>
-<summary>내용</summary>
-이미지
-</details>
+#### 6. JasonData를 Unity에 불러오기
 
-#### 4-3. API Key 사용 설정정
-<details>
-<summary>내용</summary>
-이미지
-</details>
+#### 7. UI /UX 배치하기
 
-<br>
-
-### 5. Android Build Settings
-<details>
-<summary>내용</summary>
-이미지
-</details>
+#### 8. POI Data 받아오고 띄우기
 
 ---
 <br>
 
-## 해당 프로젝트를 사용하여 개발
+## AR 도슨트체험존 시작하기
+
+#### 1. 오브젝트 인식할 Mesh 제작하기
+#### 2. 특정위치에 오브젝트 불러오기
+#### 3. 오브젝트 상호작용하기
+
+<br>
+
+---
+<br>
+
+## 해당 기능을 사용하여 개발
 ### ROI 변경 방법
 <details>
 <summary>내용</summary>
@@ -161,5 +158,5 @@ ARCore 및 Google Maps Platform에서 제공하는 [Geospatial Creator](https://
 ---
 <br>
   
-## License
-[License.md](/License.md)
+## 참고링크
+[Maps Platform - Google for Developers] https://developers.google.com/maps?hl=ko
