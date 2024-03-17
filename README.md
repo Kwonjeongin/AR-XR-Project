@@ -139,6 +139,8 @@ Google API 기반 Navigation
 ### 0. AR Foundation
 Unity로 AR 콘텐츠를 개발을 하기 위해서는 AR Foundation을 이용한 환경셋팅을 해주어야 합니다.
 유니티는 크로스 플랫폼을 지원하는 AR 플랫폼을 만들기 위해 AR Foundation 프레임워크를 제공합니다.
+![2024-03-17 20 30 13](https://github.com/Kwonjeongin/AR-XR-Project/assets/139726011/49a0c6df-e6f8-43ba-930d-5ae09584b1df)
+
 
 ### 1. ARCore Extension Package 설치
 AR Foundation용 [ARCore Extension Package](https://developers.google.com/ar/develop/unity-arf/getting-started-extensions?hl=ko)는 Unity의 AR Foundation 패키지에 기능을 추가하여 앱에서 Cloud Anchors, 카메라 구성 필터, 녹화 및 재생과 같은 기능을 사용할 수 있습니다.
