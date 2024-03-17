@@ -27,6 +27,9 @@ AR-XRProject는 ARNavigation 및 XR 컨텐츠를 개발하는 프로젝트 입�
 ---
 ## 기능상세 소개
 
+### AR?
+실제 세계를 증강하는것 => 현실세계에 가상의 오브젝트 결합
+
 ### 1. AR 내비게이션 
 Google API 기반 Navigation
 
@@ -132,6 +135,11 @@ Google API 기반 Navigation
 
 
 ## AR내비게이션 시작하는 방법
+
+### 0. AR Foundation
+Unity로 AR 콘텐츠를 개발을 하기 위해서는 AR Foundation을 이용한 환경셋팅을 해주어야 합니다.
+유니티는 크로스 플랫폼을 지원하는 AR 플랫폼을 만들기 위해 AR Foundation 프레임워크를 제공합니다.
+
 ### 1. ARCore Extension Package 설치
 AR Foundation용 [ARCore Extension Package](https://developers.google.com/ar/develop/unity-arf/getting-started-extensions?hl=ko)는 Unity의 AR Foundation 패키지에 기능을 추가하여 앱에서 Cloud Anchors, 카메라 구성 필터, 녹화 및 재생과 같은 기능을 사용할 수 있습니다.
 
