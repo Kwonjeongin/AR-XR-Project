@@ -31,8 +31,7 @@ AR-XRProject는 ARNavigation 및 XR 컨텐츠를 개발하는 프로젝트 입�
 실제 세계를 증강하는것 => 현실세계에 가상의 오브젝트 결합
 
 ### 1. AR 내비게이션 
-Google API 기반 Navigation
-
+Google API 기반 Navigation  실시간 AR화살표로 경로를 표시하여, 사용자가 목적까지 쉽게 도착할 수 있도록 도움을 줌.
 ### 2. AR 도슨트 체험존 
 
 [ImageDetection]
@@ -134,8 +133,8 @@ Google API 기반 Navigation
 
 
 
-## AR내비게이션 시작하는 방법
-
+## ARNavigation 시작하는 방법
+> 목표 : ARNavigation을 이용해 원하는 장소의 위치 까지 최적 이동 경로를 계산합니다.
 ### 0. AR Foundation
 Unity로 AR 콘텐츠를 개발을 하기 위해서는 AR Foundation을 이용한 환경셋팅을 해주어야 합니다.
 유니티는 크로스 플랫폼을 지원하는 AR 플랫폼을 만들기 위해 AR Foundation 프레임워크를 제공합니다.
@@ -188,27 +187,44 @@ ARCore 및 Google Maps Platform에서 제공하는 [Geospatial Creator](https://
 <br>
 
 #### 4. Android Build Settings
+Android 빌드 설정을 사용하여 Android 기기용 애플리케이션을 설정하고 빌드합니다.
+[Unity Android Build Setting]("https://docs.unity3d.com/kr/2021.3/Manual/android-build-settings.html")
+1. File > Build Settings를 선택합니다.
+2. Platform 창의 플랫폼 리스트에서 Android를 선택합니다.
+   참고: Android가 회색으로 비활성화된 경우 Android 환경 설정의 단계를 따르십시오.
+4. Build 버튼이 표시되지 않고 Build And Run이 회색으로 비활성화된 경우 Switch Platform을 선택합니다. 
+
 <details>
-<summary>내용</summary>
-이미지
+<summary>Build Settings</summary>
+ 
 </details>
 
-#### 5. JsonDataManager 사용하기
+![android-build-settings](https://github.com/Kwonjeongin/AR-XR-Project/assets/139726011/9040ee4e-634c-42d1-870c-46f530f38598)
 
-#### 6. JasonData를 Unity에 불러오기
+#### 5. JsonDataManager
+JSON 이란?
+JSON은 JavaScript Object Notation의 약자로, 데이터를 저장하거나 전송할 때 사용되는 텍스트 기반의 경량 데이터 교환 형식이다. 
+JSON은 속성-값 쌍(attribute-value pairs)이나 배열과 같은 데이터 구조를 표현하기 위해 설계되었으며, 사람이 읽을 수 있고 기계가 parsing(분석)하고 생성하기 쉬운 형태로 되어있다.
 
-#### 7. UI /UX 배치하기
+#### 6. JSON Utility
+UnityEngine.JsonUtility 클래스를 통해 JSON 데이터를 쉽게 읽고 쓸 수 있는 기능을 제공한다. 
+이 클래스는 직렬화(Serialize)와 비직렬화(Deserialize) 함수를 통해서 Unity 객체를 JSON 형식으로 변환하거나, 반대로 JSON 형식의 데이터를 Unity 객체로 변환한다.
 
-#### 8. POI Data 받아오고 띄우기
+#### 7. UI /UX 
+> 예시 이미지 Google Live Map
+![20240319_150959](https://github.com/Kwonjeongin/AR-XR-Project/assets/139726011/131b7623-2053-437f-8414-b96f5d1a7384)
+
+#### 8. POI Data 
 
 ---
 <br>
 
 ## AR 도슨트체험존 시작하기
+> 목표 : 특정 장소를 돌아다니면서 다양한 AR 펫 들을 만날 수 있습니다. 이 펫들은 터치를 통합 간단한 상호작용이 가능합니다.
 
-#### 1. 오브젝트 인식할 Mesh 제작하기
-#### 2. 특정위치에 오브젝트 불러오기
-#### 3. 오브젝트 상호작용하기
+#### 1. 바닥 인식할 Mesh 제작하기
+#### 2. Mesh의 특정위치에 AR펫 불러오기
+#### 3. AR펫과 상호작용 구현하기
 
 <br>
 
